@@ -1,0 +1,135 @@
+.about-container {
+  padding: 30px 0;
+  .about-box {
+    .left-layout {
+      width: 100%;
+      order: 2;
+    }
+    .right-layout {
+      margin-bottom: 20px;
+      order: 1;
+      width: 100%;
+      padding-left: 0;
+      .title {
+        font-size: 24px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        &::after {
+          width: 45px;
+          height: 2px;
+        }
+      }
+      .content {
+        font-size: 14px;
+      }
+    }
+  }
+}
+.main-container {
+  .title-module {
+    margin-bottom: 30px;
+    .title {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .desc {
+      width: 90%;
+      margin: 0 auto;
+      font-size: 13px;
+    }
+  }
+  .application-position {
+    .flex();
+    width: 120px;
+    height: 36px;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  .job-list {
+    .job-item {
+      margin-bottom: 15px;
+      .title-box {
+        height: 40px;
+        padding: 0 10px;
+        box-sizing: border-box;
+        .left-layout {
+          .flex();
+          .title {
+            font-size: 14px;
+          }
+          .desc {
+            display: none;
+          }
+        }
+        .address {
+          font-size: 14px;
+        }
+      }
+      .cont-list {
+        background-color: #f9f9f9;
+        padding: 15px;
+        display: none;
+        .cont-item {
+          margin-bottom: 20px;
+          .title {
+            font-size: 14px;
+            margin-bottom: 10px;
+          }
+          .note {
+            font-size: 12px;
+            line-height: 1.5;
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+}
+.contact-container {
+  padding: 30px 0;
+  .contact-list {
+    margin-bottom: 30px;
+    .contact-item {
+      width: 100%;
+      margin-bottom: 30px;
+      .map {
+        margin-bottom: 20px;
+      }
+      .title {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      .cont {
+        font-size: 14px;
+      }
+    }
+  }
+  .info-list {
+    flex-wrap: wrap;
+    padding: 8px;
+    .info-item {
+      width: 50%;
+      padding: 15px;
+      &::after {
+        height: 35px;
+      }
+      &:nth-child(2){
+        &::after{
+          display: none;
+        }
+      }
+      
+      .title {
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+      .info {
+        font-size: 12px;
+        color: #666;
+        a {
+          color: inherit;
+        }
+      }
+    }
+  }
+}

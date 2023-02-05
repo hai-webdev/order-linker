@@ -1,0 +1,203 @@
+@import "~@/assets/global.less";
+@import "~@/assets/mixins.less";
+@import "~@/assets/var.less";
+@import "~@/assets/common.less";
+.banner-container {
+  margin-bottom: 0;
+}
+.about-container {
+  background-image: url(/public/images/home/bg-about.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 50px 0;
+  .about-box {
+    .flex(space-between);
+    .left-layout {
+      width: 50%;
+      img {
+        max-width: 100%;
+      }
+    }
+    .right-layout {
+      width: 50%;
+      padding-left: 5%;
+      box-sizing: border-box;
+      .title {
+        font-size: 48px;
+        font-weight: bold;
+        color: #333;
+        padding-bottom: 25px;
+        margin-bottom: 30px;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 75px;
+          height: 3px;
+          background-color: @mainColor;
+        }
+      }
+      .content {
+        font-size: 18px;
+        color: #666;
+        line-height: 1.7;
+      }
+    }
+  }
+}
+.main-container {
+  background-color: #f7fcff;
+  background-image: url(/public/images/about/map.png);
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  .title-module {
+    margin-bottom: 60px;
+    .title {
+      font-size: 52px;
+      margin-bottom: 30px;
+    }
+    .desc {
+      font-size: 16px;
+    }
+  }
+  .application-position{
+    .flex();
+    border-radius: 6px;
+    width: 208px;
+    height: 65px;
+    font-size: 24px;
+    margin-bottom: 35px;
+    color: #fff;
+    background-color: @mainColor;
+    &:hover {
+      background-color: @subColor;
+    }
+  }
+  .job-list {
+    width: calc(100% - 20px);
+    max-width: 900px;
+    margin: 0 auto;
+    .job-item {
+      margin-bottom: 35px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      .title-box {
+        height: 80px;
+        cursor: pointer;
+        .flex(space-between);
+        background-color: #fff;
+        padding: 0 25px;
+        box-sizing: border-box;
+        .left-layout{
+          .flex();
+          .title{
+            font-size: 20px;
+            font-weight: bold;
+            color:#333;
+          }
+          .desc{
+            font-size: 14px;
+            color:#666;
+            margin-left: 25px;
+          }
+        }
+        .address{
+          font-size: 14px;
+          color:#232323;
+          font-weight: bold;
+        }
+      }
+      .cont-list{
+        background-color: #f9f9f9;
+        padding: 40px 25px;
+        display: none;
+        .cont-item{
+          margin-bottom: 35px;
+          .title{
+            font-size: 16px;
+            color:#232323;
+            font-weight: bold;
+            margin-bottom: 20px;
+          }
+          .note{
+            font-size: 14px;
+            color:#666;
+          }
+        }
+      }
+    }
+  }
+}
+.contact-container{
+  padding: 70px 0 60px;
+  .contact-list{
+    .flex(space-around, flex-start);
+    margin-bottom: 60px;
+    .contact-item{
+      width: 48%;
+      .map{
+        margin-bottom: 40px;
+        img{
+          display: block;
+          max-width: 100%;
+        }
+      }
+      .title{
+        font-size: 36px;
+        font-weight: bold;
+        color:@mainColor;
+        margin-bottom: 30px;
+      }
+      .cont{
+        color:#666;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    }
+  }
+  .info-list{
+    .flex();
+    background-color: #f7fcff;
+    padding: 30px;
+    box-sizing: border-box;
+    .info-item{
+      width: 25%;
+      box-sizing: border-box;
+      padding: 0 35px;
+      position: relative;
+      &::after{
+        content:"";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 78px;
+        width: 1px;
+        background-color: #ccc;
+      }
+      &:last-child{
+        &::after{
+          display: none;
+        }
+      }
+      .title{
+        font-size: 24px;
+        font-weight: bold;
+        color:@mainColor;
+        margin-bottom: 15px;
+      }
+      .info{
+        font-size: 18px;
+        color:#666;
+        a{
+          color:inherit;
+        }
+      }
+    }
+  }
+}
+@import "./1280.less" screen and (max-width:1280px);
+@import "./768.less" screen and (max-width:768px);

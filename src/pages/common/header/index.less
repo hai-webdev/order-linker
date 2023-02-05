@@ -1,0 +1,213 @@
+@import "~@/assets/mixins.less";
+@import "~@/assets/var.less";
+.pc-header {
+  border-bottom: 1px solid #fff;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: 0.6s;
+  &.on {
+    background-color: @subColor;
+  }
+  .head-center {
+    height: 100px;
+    max-width: none;
+    width: 100%;
+    padding: 0 10%;
+    box-sizing: border-box;
+    .flex(space-between);
+    .left-layout {
+      .flex(flex-start);
+      height: 100%;
+      .logo {
+        max-height: 68px;
+        display: block;
+        img {
+          display: block;
+          max-height: 68px;
+        }
+      }
+      .nav-list {
+        margin-left: 66px;
+        height: 100%;
+        .flex(flex-start);
+        .nav-item {
+          line-height: 100px;
+          height: 100%;
+          font-size: 18px;
+          a {
+            padding: 0 22px;
+            display: block;
+            height: 100%;
+            color: #fff;
+            transition: 0.6s;
+            &:hover{
+              color:@mainColor;
+            }
+          }
+          .nav-sub-container {
+            display: none;
+            background-color: @subColor;
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 100%;
+            top: 100px;
+            height: 300px;
+
+            padding-left: calc(435px + 35px);
+            .nav-thumb {
+              width: 435px;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+              }
+            }
+            .nav-sublist {
+              padding-top: 70px;
+              .flex(flex-start,flex-start);
+              .nav-subitem {
+                margin-right: 140px;
+                text-align: center;
+                .title {
+                  font-size: 16px;
+                  margin-bottom: 30px;
+                  line-height: initial;
+                  a {
+                    font-size: 16px;
+                    margin-bottom: 0;
+                    padding:0 0 5px;
+                    display: inline;
+                    line-height: initial;
+                    border-bottom: 1px solid #fff;
+                  }
+                }
+                a {
+                  display: block;
+                  font-size: 24px;
+                  color: #eee;
+                  margin-bottom: 25px;
+                  line-height: initial;
+                  &:hover{
+                    color:@mainColor;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .right-layout {
+      .flex(center);
+      .search-form {
+        position: relative;
+        .flex();
+        input {
+          width: 0;
+          opacity: 0;
+          height: 32px;
+          border: 1px solid #fff;
+          background-color: transparent;
+          position: absolute;
+          right: 0;
+          outline: none;
+          border-radius: 6px;
+          padding-left: 10px;
+          box-sizing: border-box;
+          color: #fff;
+          transition: 0.6s;
+        }
+        .submit {
+          background-color: transparent;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          position: absolute;
+          z-index: 2;
+          right: 0;
+          top: 50%;
+          margin-top: -11px;
+          .icon {
+            width: 22px;
+            height: 22px;
+            transition: 0.6s;
+          }
+        }
+        &:hover {
+          input {
+            width: 200px;
+            opacity: 1;
+          }
+          .submit {
+            margin-top: -8px;
+            .icon {
+              width: 16px;
+              height: 16px;
+            }
+          }
+        }
+      }
+      .language-box {
+        margin-left: 40px;
+        cursor: pointer;
+        user-select: none;
+        position: relative;
+        .text {
+          color: #fff;
+          .flex(center);
+          .icon-language {
+            width: 25px;
+            height: 25px;
+          }
+          span {
+            font-size: 18px;
+            margin: 0 5px;
+          }
+          .icon-arrow-down {
+            width: 7px;
+            height: 4px;
+          }
+        }
+        .language-list {
+          display: none;
+          position: absolute;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          background-color: @subColor;
+          min-width: 100%;
+          top: 35px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          .language-item {
+            text-align: center;
+            a {
+              color: #fff;
+              line-height: 2;
+            }
+            &:hover {
+              background-color: #fff;
+              a {
+                color: @subColor;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.m-header{
+  display: none;
+}
+@import "./1080.less" screen and (max-width: 1080px);
+@import "./768.less" screen and (max-width: 768px);
